@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="EstheBook — Discover premium aesthetic clinics, explore non-surgical treatments, and book appointments in 3 taps.">
+  <meta name="theme-color" content="#F7E8EA">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="EstheBook">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <title>EstheBook · Aesthetic Clinic Finder &amp; Booking</title>
+
+  <style>
+    :root {
+      --blush: #F7E8EA;
+      --blush-deep: #E8C4CB;
+      --sage: #A8BCA1;
+      --cream: #FDFBF7;
+      --ink: #3E3232;
+      --gold: #C9A96A;
+    }
+
+    html, body { margin: 0; padding: 0; height: 100%; }
+
+    body {
+      background: var(--cream);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+    }
+
+    /* ---------- Splash (visible until Flutter paints) ---------- */
+    #splash {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      background: linear-gradient(165deg, var(--blush) 0%, var(--cream) 60%, #EFF3EC 100%);
+      transition: opacity 480ms ease;
+      z-index: 10;
+    }
+    #splash.hidden { opacity: 0; pointer-events: none; }
+
+    .splash-mark {
+      width: 84px; height: 84px;
+      border-radius: 28px;
+      background: #FFFFFF;
+      box-shadow: 0 14px 34px rgba(62, 50, 50, 0.14);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 42px;
+    }
+    .splash-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 30px;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+    }
+    .splash-sub {
+      font-size: 13px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #8A7E7E;
+    }
+    .splash-loader {
+      width: 42px; height: 42px;
+      margin-top: 6px;
+      border-radius: 50%;
+      border: 3px solid var(--blush-deep);
+      border-top-color: var(--sage);
+      animation: spin 900ms linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ---------- Flutter mount ---------- */
+    flutter-view, #flutter_view {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .loader-track {
+      position: relative;
+      width: 220px; height: 3px;
+      border-radius: 3px;
+      background: rgba(62, 50, 50, 0.10);
+      overflow: hidden;
+      margin-top: 2px;
+    }
+    .loader-bar {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      width: 0%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--sage), var(--gold));
+      transition: width 200ms ease;
+    }
+  </style>
+</head>
+<body>
+  <div id="splash">
+    <div class="splash-mark">🌸</div>
+    <div class="splash-title">EstheBook</div>
+    <div class="splash-sub">Aesthetic Clinic Booking</div>
+    <div class="splash-loader"></div>
+    <div class="loader-track"><div class="loader-bar" id="loader-bar"></div></div>
+  </div>
+
+  <noscript>
+    <div style="position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:var(--cream); z-index:20; padding:24px; text-align:center;">
+      <div>
+        <div style="font-family:Georgia, serif; font-size:22px; margin-bottom:8px;">🌸 EstheBook</div>
+        <p style="max-width:340px; line-height:1.5;">
+          EstheBook needs JavaScript enabled to run.<br>
+          Please enable JavaScript and reload this page.
+        </p>
+      </div>
+    </div>
+  </noscript>
+
+  <flutter-view id="flutter_view"></flutter-view>
+
+  <script>
+    window.addEventListener('load', function (ev) {
+      {{flutter_js}}
+      {{flutter_build_config}}
+
+      var splash = document.getElementById('splash');
+      var loaderBar = document.getElementById('loader-bar');
+
+      // Simple indeterminate progress: pulse while loading.
+      var progress = 0;
+      var pulse = setInterval(function () {
+        progress = Math.min(progress + 4, 90);
+        loaderBar.style.width = progress + '%';
+      }, 120);
+
+      _flutter.loader.load({
+        serviceWorkerSettings: {
+          serviceWorkerVersion: {{flutter_service_worker_version}},
+        },
+        onEntrypointLoaded: async function (engineInitializer) {
+          var appRunner = await engineInitializer.initializeEngine({
+            hostElement: document.getElementById('flutter_view'),
+          });
+          await appRunner.runApp();
+
+          // First Flutter frame is up — retire the splash.
+          clearInterval(pulse);
+          loaderBar.style.width = '100%';
+          setTimeout(function () { splash.classList.add('hidden'); }, 240);
+        },
+      });
+    });
+  </script>
+</body>
+</html>

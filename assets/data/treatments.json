@@ -1,0 +1,342 @@
+[
+  {
+    "id": "c1-t1",
+    "clinicId": "c1",
+    "name": "Signature Botox — Forehead & Crow's Feet",
+    "category": "Injectables",
+    "summary": "Micro-dosed botulinum toxin to soften dynamic lines while keeping natural expression. Reviewed at 2 weeks with a complimentary touch-up.",
+    "benefits": [
+      "Softens frown lines & crow's feet",
+      "Natural movement preserved",
+      "2-week review included"
+    ],
+    "durationMinutes": 30,
+    "price": 480,
+    "downtime": "none",
+    "popularity": 0.97,
+    "gradSeed": 3
+  },
+  {
+    "id": "c1-t2",
+    "clinicId": "c1",
+    "name": "Lip Sculpt Filler",
+    "category": "Injectables",
+    "summary": "Hyaluronic acid filler tailored for proportion and hydration, from a subtle 'lipstick lift' to fuller volume. Numbing cream included.",
+    "benefits": [
+      "Customised volume & shape",
+      "Reversible HA formula",
+      "Includes 2-week review"
+    ],
+    "durationMinutes": 45,
+    "price": 690,
+    "downtime": "low",
+    "popularity": 0.88,
+    "gradSeed": 9
+  },
+  {
+    "id": "c1-t3",
+    "clinicId": "c1",
+    "name": "Lumière Signature Facial",
+    "category": "Medical Facials",
+    "summary": "A 60-minute layering of gentle enzymes, LED and a bespoke serum cocktail. The clinic's most-loved monthly ritual.",
+    "benefits": [
+      "Immediate glow",
+      "Zero downtime",
+      "Bespoke serum blend"
+    ],
+    "durationMinutes": 60,
+    "price": 220,
+    "downtime": "none",
+    "popularity": 0.91,
+    "gradSeed": 15
+  },
+  {
+    "id": "c1-t4",
+    "clinicId": "c1",
+    "name": "Chin & Jawline Definition",
+    "category": "Injectables",
+    "summary": "Structural filler to refine the chin and jawline, mapped on 3D imaging for balanced profiles.",
+    "benefits": [
+      "Sharper side profile",
+      "3D imaging mapping",
+      "Long-lasting HA"
+    ],
+    "durationMinutes": 50,
+    "price": 840,
+    "downtime": "low",
+    "popularity": 0.72,
+    "gradSeed": 27
+  },
+  {
+    "id": "c2-t1",
+    "clinicId": "c2",
+    "name": "Gentle Laser Resurfacing",
+    "category": "Laser Therapy",
+    "summary": "Non-ablative fractional laser for texture and pores, with minimal social downtime and a soothing post-laser mask.",
+    "benefits": [
+      "Smoother texture",
+      "Minimises pores",
+      "Little to no downtime"
+    ],
+    "durationMinutes": 60,
+    "price": 450,
+    "downtime": "low",
+    "popularity": 0.85,
+    "gradSeed": 7
+  },
+  {
+    "id": "c2-t2",
+    "clinicId": "c2",
+    "name": "Pigmentation Correction Programme",
+    "category": "Laser Therapy",
+    "summary": "A structured 3-session pigment programme combining laser toning with prescription brightening actives.",
+    "benefits": [
+      "Fades dark spots",
+      "3-session protocol",
+      "Doctor-supervised"
+    ],
+    "durationMinutes": 45,
+    "price": 990,
+    "downtime": "medium",
+    "popularity": 0.76,
+    "gradSeed": 19
+  },
+  {
+    "id": "c2-t3",
+    "clinicId": "c2",
+    "name": "Calming Acne Facial",
+    "category": "Medical Facials",
+    "summary": "Salicylic-led Clarify facial with blue LED, designed for congested, breakout-prone skin.",
+    "benefits": [
+      "Clears congestion",
+      "Calms redness",
+      "Safe for sensitive skin"
+    ],
+    "durationMinutes": 50,
+    "price": 160,
+    "downtime": "none",
+    "popularity": 0.8,
+    "gradSeed": 31
+  },
+  {
+    "id": "c3-t1",
+    "clinicId": "c3",
+    "name": "Skin Booster Glow Drip",
+    "category": "Skin Boosters",
+    "summary": "Micro-injections of hydrating HA boosters across the face for a dewy, lit-from-within finish over 2–3 weeks.",
+    "benefits": [
+      "Deep hydration",
+      "Refined skin quality",
+      "Results build over weeks"
+    ],
+    "durationMinutes": 40,
+    "price": 750,
+    "downtime": "low",
+    "popularity": 0.93,
+    "gradSeed": 12
+  },
+  {
+    "id": "c3-t2",
+    "clinicId": "c3",
+    "name": "Marina Radiance Laser Toning",
+    "category": "Laser Therapy",
+    "summary": "Low-fluence Q-switched toning for overall brightness — the 'glass skin' lunchtime laser with zero downtime.",
+    "benefits": [
+      "Instant radiance",
+      "No downtime",
+      "Safe for all skin tones"
+    ],
+    "durationMinutes": 30,
+    "price": 280,
+    "downtime": "none",
+    "popularity": 0.89,
+    "gradSeed": 41
+  },
+  {
+    "id": "c3-t3",
+    "clinicId": "c3",
+    "name": "Under-Eye Rejuvenation",
+    "category": "Skin Boosters",
+    "summary": "Cannula-based under-eye filler and polynucleotides to soften hollows and crepey texture.",
+    "benefits": [
+      "Brightens tired eyes",
+      "Cannula technique",
+      "Minimal bruising"
+    ],
+    "durationMinutes": 45,
+    "price": 820,
+    "downtime": "medium",
+    "popularity": 0.7,
+    "gradSeed": 55
+  },
+  {
+    "id": "c3-t4",
+    "clinicId": "c3",
+    "name": "Glass Skin Programme",
+    "category": "Skin Rejuvenation",
+    "summary": "The clinic's flagship 3-step programme: laser toning, skin boosters and a tailored homecare dispensary plan.",
+    "benefits": [
+      "Full-face renewal",
+      "Personalised homecare",
+      "Concierge aftercare"
+    ],
+    "durationMinutes": 90,
+    "price": 1850,
+    "downtime": "low",
+    "popularity": 0.95,
+    "gradSeed": 66
+  },
+  {
+    "id": "c4-t1",
+    "clinicId": "c4",
+    "name": "Baby Botox® Micro-Toxin",
+    "category": "Injectables",
+    "summary": "Tiny doses across the upper face for prevention and softening — perfect for a natural, 'nothing done' look.",
+    "benefits": [
+      "Ultra-natural result",
+      "Preventative care",
+      "Quick 20-min visit"
+    ],
+    "durationMinutes": 20,
+    "price": 320,
+    "downtime": "none",
+    "popularity": 0.9,
+    "gradSeed": 21
+  },
+  {
+    "id": "c4-t2",
+    "clinicId": "c4",
+    "name": "First-Timer Consultation",
+    "category": "Consultation",
+    "summary": "A 30-minute pressure-free skin and aesthetic mapping with Dr. Sarah Oh. Redeemable against any treatment.",
+    "benefits": [
+      "Honest, no-pressure advice",
+      "Personal roadmap",
+      "Fee redeemable"
+    ],
+    "durationMinutes": 30,
+    "price": 60,
+    "downtime": "none",
+    "popularity": 0.82,
+    "gradSeed": 44
+  },
+  {
+    "id": "c4-t3",
+    "clinicId": "c4",
+    "name": "Gentle Glow Peel",
+    "category": "Medical Facials",
+    "summary": "A light lactic-mandelic peel series for dullness and mild congestion, with zero peeling socially.",
+    "benefits": [
+      "Brightens dullness",
+      "No visible peeling",
+      "Lunchtime friendly"
+    ],
+    "durationMinutes": 40,
+    "price": 140,
+    "downtime": "none",
+    "popularity": 0.78,
+    "gradSeed": 52
+  },
+  {
+    "id": "c5-t1",
+    "clinicId": "c5",
+    "name": "Thread Lift Contouring",
+    "category": "Skin Rejuvenation",
+    "summary": "Dissolvable PDO threads to lift mid-face and jawline, with results developing over 6–8 weeks.",
+    "benefits": [
+      "Non-surgical lift",
+      "Collagen stimulation",
+      "Results up to 18 months"
+    ],
+    "durationMinutes": 75,
+    "price": 2400,
+    "downtime": "high",
+    "popularity": 0.68,
+    "gradSeed": 33
+  },
+  {
+    "id": "c5-t2",
+    "clinicId": "c5",
+    "name": "Deep Laser Resurfacing",
+    "category": "Laser Therapy",
+    "summary": "Ablative fractional laser for deeper lines and scarring, performed under numbing with a 5–7 day recovery plan.",
+    "benefits": [
+      "Dramatic texture renewal",
+      "Treats scars & deep lines",
+      "Doctor-only procedure"
+    ],
+    "durationMinutes": 90,
+    "price": 1600,
+    "downtime": "high",
+    "popularity": 0.6,
+    "gradSeed": 77
+  },
+  {
+    "id": "c5-t3",
+    "clinicId": "c5",
+    "name": "Rejuran Healer",
+    "category": "Skin Boosters",
+    "summary": "Polynucleotide skin healer that repairs and thickens thin, tired skin over a course of sessions.",
+    "benefits": [
+      "Repairs skin quality",
+      "Boosts elasticity",
+      "K-beauty favourite"
+    ],
+    "durationMinutes": 45,
+    "price": 680,
+    "downtime": "medium",
+    "popularity": 0.74,
+    "gradSeed": 88
+  },
+  {
+    "id": "c6-t1",
+    "clinicId": "c6",
+    "name": "Lymphatic Glow Facial",
+    "category": "Medical Facials",
+    "summary": "A sculpting facial massage with lymphatic drainage to de-puff and restore radiance — the Sunday-reset facial.",
+    "benefits": [
+      "De-puffs & sculpts",
+      "Deeply relaxing",
+      "Instant radiance"
+    ],
+    "durationMinutes": 60,
+    "price": 120,
+    "downtime": "none",
+    "popularity": 0.86,
+    "gradSeed": 5
+  },
+  {
+    "id": "c6-t2",
+    "clinicId": "c6",
+    "name": "Botanical Enzyme Facial",
+    "category": "Medical Facials",
+    "summary": "Papaya and pumpkin enzymes gently resurface while a green-tea mask calms — gentle enough for weekly visits.",
+    "benefits": [
+      "Gentle exfoliation",
+      "Soothes sensitivity",
+      "Vegan actives"
+    ],
+    "durationMinutes": 50,
+    "price": 95,
+    "downtime": "none",
+    "popularity": 0.75,
+    "gradSeed": 17
+  },
+  {
+    "id": "c6-t3",
+    "clinicId": "c6",
+    "name": "Wellness Skin Ritual (90 min)",
+    "category": "Wellness Rituals",
+    "summary": "Facial, scalp massage and aromatherapy in the garden courtyard. The full slow-beauty reset.",
+    "benefits": [
+      "Full reset ritual",
+      "Scalp & shoulder massage",
+      "Aromatherapy included"
+    ],
+    "durationMinutes": 90,
+    "price": 180,
+    "downtime": "none",
+    "popularity": 0.71,
+    "gradSeed": 29
+  }
+]

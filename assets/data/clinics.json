@@ -1,0 +1,130 @@
+[
+  {
+    "id": "c1",
+    "name": "Lumière Aesthetics",
+    "tagline": "Paris-trained artistry, gentle hands",
+    "description": "A boutique clinic in the heart of the Arts District, founded by Dr. Camille Renaud. Lumière specialises in natural-looking injectables and medical-grade skincare, with an unhurried, consultation-first approach.",
+    "specialties": ["Injectables", "Medical Facials"],
+    "amenities": ["Free Wi-Fi", "Valet Parking", "Herbal Tea Bar", "Private Suites"],
+    "city": "Singapore",
+    "district": "Orchard",
+    "rating": 4.9,
+    "reviewCount": 312,
+    "priceLevel": 3,
+    "openHour": 9,
+    "closeHour": 20,
+    "gradSeed": 3,
+    "treatmentIds": ["c1-t1", "c1-t2", "c1-t3", "c1-t4"],
+    "practitioners": [
+      { "name": "Dr. Camille Renaud", "title": "Medical Director", "specialty": "Dermal Fillers", "yearsExperience": 14 },
+      { "name": "Dr. Wei Lin Teo", "title": "Aesthetic Physician", "specialty": "Botulinum Toxin", "yearsExperience": 9 },
+      { "name": "Nadia Rahman", "title": "Senior Aesthetician", "specialty": "Medical Facials", "yearsExperience": 7 }
+    ]
+  },
+  {
+    "id": "c2",
+    "name": "Sage & Skin Clinic",
+    "tagline": "Holistic skin science",
+    "description": "Sage & Skin blends dermatological rigor with a calm, plant-filled studio. Known for laser resurfacing programmes and honest, results-led advice — no upselling, ever.",
+    "specialties": ["Laser Therapy", "Skin Rejuvenation"],
+    "amenities": ["Organic Tea Bar", "Wheelchair Accessible", "Evening Hours"],
+    "city": "Singapore",
+    "district": "Tiong Bahru",
+    "rating": 4.7,
+    "reviewCount": 204,
+    "priceLevel": 2,
+    "openHour": 10,
+    "closeHour": 21,
+    "gradSeed": 7,
+    "treatmentIds": ["c2-t1", "c2-t2", "c2-t3"],
+    "practitioners": [
+      { "name": "Dr. Aisyah Karim", "title": "Consultant Dermatologist", "specialty": "Laser Resurfacing", "yearsExperience": 12 },
+      { "name": "Jonas Lim", "title": "Laser Specialist", "specialty": "Pigmentation", "yearsExperience": 8 }
+    ]
+  },
+  {
+    "id": "c3",
+    "name": "Maison Glow",
+    "tagline": "Where glow is engineered",
+    "description": "A glass-and-marble flagship in Marina Bay pairing medical-grade technology with hotel-level comfort. Maison Glow is the go-to for skin boosters and premium combination programmes.",
+    "specialties": ["Skin Boosters", "Laser Therapy"],
+    "amenities": ["Marina View Suites", "Concierge", "Valet Parking", "Skincare Dispensary"],
+    "city": "Singapore",
+    "district": "Marina Bay",
+    "rating": 4.8,
+    "reviewCount": 486,
+    "priceLevel": 3,
+    "openHour": 10,
+    "closeHour": 20,
+    "gradSeed": 12,
+    "treatmentIds": ["c3-t1", "c3-t2", "c3-t3", "c3-t4"],
+    "practitioners": [
+      { "name": "Dr. Isabel Chua", "title": "Medical Director", "specialty": "Skin Boosters", "yearsExperience": 15 },
+      { "name": "Dr. Ren Kobayashi", "title": "Aesthetic Physician", "specialty": "Laser Therapy", "yearsExperience": 10 },
+      { "name": "Priya Nair", "title": "Patient Concierge", "specialty": "Aftercare", "yearsExperience": 6 }
+    ]
+  },
+  {
+    "id": "c4",
+    "name": "The Blush Room",
+    "tagline": "Subtle. Soft. You.",
+    "description": "A women-founded studio focused on 'tweakments' — micro-dosing botox, gentle resurfacing and preventative care for first-timers in a judgement-free space.",
+    "specialties": ["Injectables", "Medical Facials"],
+    "amenities": ["Female-Only Team", "Free Wi-Fi", "Evening Hours"],
+    "city": "Singapore",
+    "district": "Holland Village",
+    "rating": 4.6,
+    "reviewCount": 158,
+    "priceLevel": 2,
+    "openHour": 11,
+    "closeHour": 21,
+    "gradSeed": 21,
+    "treatmentIds": ["c4-t1", "c4-t2", "c4-t3"],
+    "practitioners": [
+      { "name": "Dr. Sarah Oh", "title": "Founder & Physician", "specialty": "Preventative Injectables", "yearsExperience": 8 },
+      { "name": "Chloe Tan", "title": "Aesthetician", "specialty": "Acne Facials", "yearsExperience": 5 }
+    ]
+  },
+  {
+    "id": "c5",
+    "name": "Atelier Dermé",
+    "tagline": "Clinical precision, couture care",
+    "description": "A doctor-led atelier renowned for contouring threads and high-intensity laser work. Every plan is drafted by a dermatologist and executed to the letter.",
+    "specialties": ["Laser Therapy", "Skin Rejuvenation"],
+    "amenities": ["On-Site Pharmacy", "Valet Parking", "Private Recovery Lounge"],
+    "city": "Singapore",
+    "district": "Novena",
+    "rating": 4.5,
+    "reviewCount": 97,
+    "priceLevel": 3,
+    "openHour": 9,
+    "closeHour": 18,
+    "gradSeed": 33,
+    "treatmentIds": ["c5-t1", "c5-t2", "c5-t3"],
+    "practitioners": [
+      { "name": "Dr. Marcus Yuen", "title": "Consultant Dermatologist", "specialty": "Thread Lifting", "yearsExperience": 16 },
+      { "name": "Dr. Hana Yusof", "title": "Aesthetic Physician", "specialty": "Laser Therapy", "yearsExperience": 11 }
+    ]
+  },
+  {
+    "id": "c6",
+    "name": "Velvet Leaf Wellness",
+    "tagline": "Gentle rituals, visible results",
+    "description": "A serene wellness-forward clinic where medical facials meet lymphatic therapies. Perfect for maintenance visits and slow-beauty enthusiasts.",
+    "specialties": ["Medical Facials", "Wellness Rituals"],
+    "amenities": ["Garden Courtyard", "Herbal Tea Bar", "Wheelchair Accessible"],
+    "city": "Singapore",
+    "district": "Katong",
+    "rating": 4.4,
+    "reviewCount": 132,
+    "priceLevel": 1,
+    "openHour": 10,
+    "closeHour": 19,
+    "gradSeed": 5,
+    "treatmentIds": ["c6-t1", "c6-t2", "c6-t3"],
+    "practitioners": [
+      { "name": "Grace Ong", "title": "Lead Aesthetician", "specialty": "Lymphatic Facials", "yearsExperience": 10 },
+      { "name": "Dr. Amir Zulkifli", "title": "Aesthetic Physician", "specialty": "Skin Health", "yearsExperience": 7 }
+    ]
+  }
+]
