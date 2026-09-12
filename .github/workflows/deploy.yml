@@ -17,14 +17,29 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    outputs:
+      base-url: ${{ steps.get-repo-info.outputs.base-url }}
     steps:
       - uses: actions/checkout@v4
+
+      - name: Get repository info
+        id: get-repo-info
+        run: |
+          REPO_NAME=$(basename ${{ github.repository }})
+          BASE_URL="/${REPO_NAME}/"
+          echo "base-url=${BASE_URL}" >> $GITHUB_OUTPUT
+          echo "Repository: ${{ github.repository }}, Base URL: ${BASE_URL}"
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: stable
           cache: true
+
+      - name: Enable Flutter Web
+        run: flutter config --enable-web
 
       - name: Get dependencies
         run: flutter pub get
@@ -36,7 +51,7 @@ jobs:
         run: flutter test
 
       - name: Build web
-        run: flutter build web --release --base-href /${{ github.event.repository.name }}/
+        run: flutter build web --release --base-href ${{ steps.get-repo-info.outputs.base-url }}
 
       - name: Add 404 fallback
         run: cp build/web/index.html build/web/404.html
