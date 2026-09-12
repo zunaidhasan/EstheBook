@@ -70,7 +70,7 @@ class _EbShellState extends ConsumerState<EbShell> {
                     const Text(
                       'EstheBook',
                       style: TextStyle(
-                        fontFamily: 'PlayfairDisplay',
+                        fontFamily: 'Georgia, serif',
                         fontWeight: FontWeight.w700,
                         fontSize: 13,
                         color: EbColors.ink,

@@ -39,8 +39,10 @@ class EbColors {
 class EbTextStyles {
   const EbTextStyles._();
 
-  static const String serifFamily = 'PlayfairDisplay';
-  static const String sansFamily = 'Inter';
+  // Note: Custom fonts (PlayfairDisplay, Inter) are optional.
+  // When not included, system fonts provide fallback.
+  static const String serifFamily = 'Georgia, serif';
+  static const String sansFamily = 'system-ui, -apple-system, sans-serif';
 
   static const TextStyle h1 = TextStyle(
     fontFamily: serifFamily,
