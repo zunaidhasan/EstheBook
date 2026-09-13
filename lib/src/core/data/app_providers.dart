@@ -120,7 +120,7 @@ final filteredClinicsProvider = FutureProvider.autoDispose<List<ClinicWithPrice>
   await Future<void>.delayed(const Duration(milliseconds: 220)); // mock latency
 
   final q = filters.query.trim().toLowerCase();
-  var list = repo.clinics.where((c) {
+  final list = repo.clinics.where((c) {
     if (q.isNotEmpty &&
         !c.name.toLowerCase().contains(q) &&
         !c.tagline.toLowerCase().contains(q) &&
