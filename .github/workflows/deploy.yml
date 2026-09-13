@@ -17,8 +17,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     outputs:
       base-url: ${{ steps.get-repo-info.outputs.base-url }}
     steps:
@@ -27,9 +25,9 @@ jobs:
       - name: Get repository info
         id: get-repo-info
         run: |
-          REPO_NAME=$(basename ${{ github.repository }})
+          REPO_NAME=$(basename "${{ github.repository }}")
           BASE_URL="/${REPO_NAME}/"
-          echo "base-url=${BASE_URL}" >> $GITHUB_OUTPUT
+          echo "base-url=${BASE_URL}" >> "$GITHUB_OUTPUT"
           echo "Repository: ${{ github.repository }}, Base URL: ${BASE_URL}"
 
       - name: Set up Flutter
@@ -45,19 +43,24 @@ jobs:
         run: flutter pub get
 
       - name: Analyze
-run: flutter analyze || true
+        run: flutter analyze --no-fatal-infos --no-fatal-warnings
 
       - name: Run tests
         run: flutter test
 
       - name: Build web
-        run: flutter build web --release --base-href ${{ steps.get-repo-info.outputs.base-url }}
+        run: flutter build web --release --base-href "${{ steps.get-repo-info.outputs.base-url }}"
 
       - name: Add 404 fallback
         run: cp build/web/index.html build/web/404.html
 
       - name: Disable Jekyll processing
         run: touch build/web/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
