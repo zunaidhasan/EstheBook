@@ -44,9 +44,9 @@ class BookingSuccessScreen extends ConsumerWidget {
                   child: const Icon(Icons.check_rounded, size: 52, color: Colors.white),
                 ),
                 const SizedBox(height: 22),
-                Text('You’re booked! 🌸', style: EbTextStyles.h1),
+                const Text('You’re booked! 🌸', style: EbTextStyles.h1),
                 const SizedBox(height: 6),
-                Text(
+                const Text(
                   'A confirmation has been sent to your email.\nWe can’t wait to see you.',
                   style: EbTextStyles.subtitle,
                   textAlign: TextAlign.center,

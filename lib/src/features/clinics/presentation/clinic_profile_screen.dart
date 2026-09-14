@@ -222,7 +222,7 @@ class _ClinicProfileContent extends StatelessWidget {
                   ),
 
                 // Treatment menu
-                const EbSectionHeader(
+                EbSectionHeader(
                   title: 'Treatment menu',
                   subtitle: 'Treatments',
                   trailing: Text(
@@ -253,8 +253,8 @@ class _ClinicProfileContent extends StatelessWidget {
                 20, 12, 20,
                 12 + MediaQuery.paddingOf(context).bottom,
               ),
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [Color(0x00FDFBF7), Color(0xFFFDFBF7)],
@@ -268,7 +268,7 @@ class _ClinicProfileContent extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('From', style: EbTextStyles.label),
+                          const Text('From', style: EbTextStyles.label),
                           EbPrice(amount: cheapest),
                         ],
                       ),
@@ -368,11 +368,11 @@ class _TreatmentTile extends StatelessWidget {
               EbPill(label: '${treatment.durationMinutes} min', icon: Icons.schedule),
               EbDowntimePill(label: treatment.downtimeLabel, color: _downtimeColor),
               if (treatment.popularity >= 0.85)
-                EbPill(
+                const EbPill(
                   label: 'Popular',
                   icon: Icons.local_fire_department_outlined,
-                  background: const Color(0xFFFDF0E4),
-                  color: const Color(0xFFB97A3D),
+                  background: Color(0xFFFDF0E4),
+                  color: Color(0xFFB97A3D),
                 ),
             ],
           ),

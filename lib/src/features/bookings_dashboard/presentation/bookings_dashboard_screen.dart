@@ -27,19 +27,19 @@ class BookingsDashboardScreen extends ConsumerWidget {
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('My Bookings', style: EbTextStyles.h2),
+              const Text('My Bookings', style: EbTextStyles.h2),
               Text(
                 'Hi ${session.userName}, here’s your beauty diary',
                 style: EbTextStyles.label,
               ),
             ],
           ),
-          bottom: TabBar(
+          bottom: const TabBar(
             labelColor: EbColors.ink,
             unselectedLabelColor: EbColors.inkSoft,
             indicatorColor: EbColors.sageDeep,
             labelStyle: EbTextStyles.bodyStrong,
-            tabs: const [
+            tabs: [
               Tab(text: 'Upcoming'),
               Tab(text: 'History'),
             ],
@@ -86,13 +86,13 @@ class _UpcomingList extends ConsumerWidget {
             children: [
               Row(
                 children: [
-                  EbIconBadge(icon: Icons.event, size: 40),
+                  const EbIconBadge(icon: Icons.event, size: 40),
                   const SizedBox(width: 12),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Next appointment', style: EbTextStyles.overline),
+                        const Text('Next appointment', style: EbTextStyles.overline),
                         Text(
                           EbFormatters.relativeDay(next.start, DateTime.now()),
                           style: EbTextStyles.h2,
@@ -232,7 +232,7 @@ class _ApptTile extends ConsumerWidget {
                     onPressed: () => _showCancelDialog(context, ref),
                     style: OutlinedButton.styleFrom(
                       minimumSize: const Size(0, 44),
-                      side: const BorderSide(color: EbColors.error.withValues(alpha: 0.4)),
+                      side: BorderSide(color: EbColors.error.withValues(alpha: 0.4)),
                       foregroundColor: EbColors.error,
                     ),
                     child: const Text('Cancel'),

@@ -456,7 +456,7 @@ class _StepSlotState extends ConsumerState<_StepSlot> {
         ),
         Expanded(
           child: slots.isEmpty
-              ? EbEmptyState(
+              ? const EbEmptyState(
                   icon: Icons.event_busy,
                   title: 'No slots left',
                   message: 'Fully booked for this day — please pick another date.',
@@ -580,7 +580,7 @@ class _StepConfirm extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Booking summary', style: EbTextStyles.h3),
+              const Text('Booking summary', style: EbTextStyles.h3),
               const SizedBox(height: 12),
               _SummaryRow(icon: Icons.spa_outlined, label: 'Treatment', value: treatment!.name),
               _SummaryRow(icon: Icons.storefront_outlined, label: 'Clinic', value: clinic.name),
@@ -604,9 +604,9 @@ class _StepConfirm extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Practitioner', style: EbTextStyles.h3),
+              const Text('Practitioner', style: EbTextStyles.h3),
               const SizedBox(height: 4),
-              Text(
+              const Text(
                 'Optional — choose who you’d like to see.',
                 style: EbTextStyles.label,
               ),
@@ -639,7 +639,7 @@ class _StepConfirm extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Notes for the clinic', style: EbTextStyles.h3),
+              const Text('Notes for the clinic', style: EbTextStyles.h3),
               const SizedBox(height: 8),
               TextField(
                 controller: notesController,

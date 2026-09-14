@@ -51,7 +51,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               const SizedBox(height: 28),
               const Text('Welcome to EstheBook', style: EbTextStyles.h1, textAlign: TextAlign.center),
               const SizedBox(height: 10),
-              Text(
+              const Text(
                 'Discover premium aesthetic clinics, compare treatments with transparent pricing, and book in three taps.',
                 style: EbTextStyles.subtitle,
                 textAlign: TextAlign.center,

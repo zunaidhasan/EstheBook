@@ -152,7 +152,7 @@ class _DiscoveryScreenState extends ConsumerState<DiscoveryScreen> {
                   color: EbColors.sageDeep,
                   onRefresh: () async {
                     ref.invalidate(filteredClinicsProvider);
-                    await results.future;
+                    await ref.read(filteredClinicsProvider.future);
                   },
                   child: ListView.separated(
                     physics: const AlwaysScrollableScrollPhysics(),
@@ -392,7 +392,7 @@ class _ClinicCard extends ConsumerWidget {
                       ),
                     ),
                     const SizedBox(width: 8),
-                    Text('From ', style: EbTextStyles.label),
+                    const Text('From ', style: EbTextStyles.label),
                     EbPrice(amount: data.priceFrom, small: true),
                   ],
                 ),
@@ -438,7 +438,7 @@ class _DiscoveryFilterSheetState extends ConsumerState<_DiscoveryFilterSheet> {
             padding: const EdgeInsets.fromLTRB(20, 4, 20, 0),
             child: Row(
               children: [
-                Expanded(child: Text('Filter clinics', style: EbTextStyles.h3)),
+                const Expanded(child: Text('Filter clinics', style: EbTextStyles.h3)),
                 TextButton(
                   onPressed: () => ref.read(discoveryFiltersProvider.notifier).reset(),
                   child: const Text('Reset'),
@@ -452,7 +452,7 @@ class _DiscoveryFilterSheetState extends ConsumerState<_DiscoveryFilterSheet> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Specialty', style: EbTextStyles.bodyStrong),
+                  const Text('Specialty', style: EbTextStyles.bodyStrong),
                   const SizedBox(height: 8),
                   Wrap(
                     spacing: 8,
@@ -473,7 +473,7 @@ class _DiscoveryFilterSheetState extends ConsumerState<_DiscoveryFilterSheet> {
                     ],
                   ),
                   const SizedBox(height: 18),
-                  Text('District', style: EbTextStyles.bodyStrong),
+                  const Text('District', style: EbTextStyles.bodyStrong),
                   const SizedBox(height: 8),
                   Wrap(
                     spacing: 8,
@@ -494,7 +494,7 @@ class _DiscoveryFilterSheetState extends ConsumerState<_DiscoveryFilterSheet> {
                     ],
                   ),
                   const SizedBox(height: 18),
-                  Text('Minimum rating', style: EbTextStyles.bodyStrong),
+                  const Text('Minimum rating', style: EbTextStyles.bodyStrong),
                   Slider(
                     value: filters.minRating,
                     min: 0,
@@ -541,8 +541,8 @@ class _DiscoverySortSheet extends ConsumerWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 4, 20, 8),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(20, 4, 20, 8),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text('Sort by', style: EbTextStyles.h3),

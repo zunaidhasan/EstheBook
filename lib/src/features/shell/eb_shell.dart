@@ -39,7 +39,7 @@ class _EbShellState extends ConsumerState<EbShell> {
     final index = _selectedIndex(context);
     final wide = MediaQuery.sizeOf(context).width >= 900;
 
-    final destinations = const [
+    const destinations = [
       (icon: Icons.explore_outlined, selectedIcon: Icons.explore, label: 'Discover'),
       (icon: Icons.event_note_outlined, selectedIcon: Icons.event_note, label: 'My Bookings'),
     ];
